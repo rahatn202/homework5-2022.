@@ -1,0 +1,177 @@
+/* step-1 */
+@keyframes logo{
+    0%   {top: 0px;   width: 25px; opacity: 0;}
+  100% {top: 200px;  width: 475px; opacity: 1;}
+
+}
+#logo{
+    animation-name: logo;
+    
+    /* position: relative; */
+    animation: logo 4s ;
+} 
+
+/* step-2 */
+body{
+    font-family: 'Poopins', serif;
+    background: url(../images/concrete_seamless.png),#f1f1f1 ;
+    
+    
+    ;
+}
+/* step-3 */
+header{
+    display: flex;
+     flex-direction: column; 
+     align-items: center;
+     
+}
+/* step-4 */
+.nav_links{
+   display: flex;
+   flex-direction: column;
+   /* may be color won't change */
+   /* color: blue; 
+    */
+
+}
+a:visited{
+    color: blue;
+}
+.nav_links>nav{
+border-radius: 20;
+    
+}
+/* step-6 */
+
+
+.card > header {
+    background-color: #288088;
+    border: 2px solid #45adad;
+    padding: 20px 0 20px 0;
+    border-radius: 50px 50px 0 0;
+}
+.pricing > .card {
+    border-radius: 50px 50px 0 0;
+}
+/* step_7 */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+}
+/* step-8 */
+.pricing {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* step-9 */
+
+.gallery img{
+   
+    
+    border: solid 10px #50C7C7;
+    width: 300px;
+    margin: 10px;
+    
+    
+
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+    /* align-items: center;
+    */
+}
+
+@media screen and (min-width: 900px){
+    /* step-11 */
+    header{
+         /* display: flex; */
+         flex-direction: row; 
+         /* align-items: right; */
+         justify-content: space-between;
+         
+    }
+    
+    .nav_links{
+       /* display: flex; */
+       /* flex-wrap: wrap; */
+       flex-direction: row;
+       /* color: blue; */
+       /* justify-content: right; */
+       
+    
+    }
+    .pricing{
+        flex-direction: row;
+        justify-content: center;
+    }
+/* step-12 */
+.card{
+    /* border-radius: 50px 50px 0px 0px;
+    display: flex;
+    flex-direction: column; */
+    flex-basis: 275px;
+}
+
+/* .pricing{
+    display: flex;
+    flex-wrap: wrap;       
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+step-13 */
+body>header{
+    position: sticky ;
+    top: 0;
+} 
+
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    #logo {
+        -webkit-animation-name: none;
+           -moz-animation-name: none;
+             -o-animation-name: none;
+                animation-name: none;
+    }
+
+    
+}
+/* step-15-21 */
+@media print{
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+    nav {
+        width: 100%;
+    }
+    .nav_links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .pricing {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items:flex-end;
+    }
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+    .gallery, #gallery {
+        display: none;
+    }
+    .card li:nth-child(2):after {
+        content: '👍';
+    }
+
+    
+}
